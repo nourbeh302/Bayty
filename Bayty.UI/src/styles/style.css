@@ -25,7 +25,11 @@ li {
   list-style: none;
 }
 
-a, button {
+:is(a, button, [type="button"], [type="submit"]) {
   all: unset;
   cursor: pointer;
+}
+
+:is(input, select, textarea, button) {
+  font: inherit;
 }

@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'FabricMDL2Icons';
+    src: url('../../../../../assets/icons/fabric-icons.woff') format('woff');
+}
+
+.home-filter {
+    --filter-height: 240px;
+    background: white;
+
+    width: min(1080px, 100%);
+    height: min(var(--filter-height), 100%);
+
+    box-shadow: var(--layout-shadow);
+    border-radius: 6px;
+    overflow: hidden;
+
+    display: block;
+    margin: 0 auto;
+    translate: 0 calc(var(--filter-height) / -2);
+}
+
+.control-group {
+    background: var(--layout-color);
+}
+
+.control-group button {
+    padding: 16px 32px;
+}
+
+.control-group button:focus {
+    background: white;
+}
+
+/* Filter form fields */
+
+.home-filter .c-form-group {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.c-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.c-form-row .c-form-field {
+    flex: 1 0 200px;
+}
+
+.home-filter .c-form-field :is(input, select) {
+    width: 100%;
+    background: white;
+    border: 1px solid black;
+}
+
+.home-filter .c-form-field:has([type="submit"]) input {
+    border: 0;
+    background: black;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.home-filter .c-form-field:has([type="submit"]) input:hover {
+    background: #222;
+}
+
+.home-filter .c-form-field>* {
+    margin-top: 0;
+}
+
+/* Custom Dropdown */
+
+.c-select {
+    position: relative;
+}
+
+.c-select select {
+    visibility: none;
+    appearance: none;
+}
+
+.c-select::after {
+    font-size: 14px;
+    font-family: "FabricMDL2Icons";
+    content: "\E70D";
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    translate: 0 -50%;
+
+    display: grid;
+    place-content: center center;
+}
+
+/* .ms-Icon {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: 'FabricMDL2Icons';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+} */
+
+.ms-Icon--ChevronDown::before {
+    content: "\E70D";
+}

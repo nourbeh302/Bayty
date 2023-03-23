@@ -1,33 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import { FeaturesRoutingModule } from './features-routing.module';
 
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { UserDetailsComponent } from './profile-details/user-details.component';
+import { HomeModule } from './home/home.module';
+import { LoginModule } from './login/login.module';
+import { RegisterModule } from './register/register.module';
+import { ProfileDetailsModule } from './profile-details/profile-details.module';
+import { NotFoundModule } from './not-found/not-found.module';
 
 import { LoaderComponent } from '../shared/components/loader/loader.component';
-import { HomeComponent } from './home/home.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
-    LoginComponent,
-    RegisterComponent,
-    HomeComponent,
-    NotFoundComponent,
-    LoaderComponent,
-    UserDetailsComponent
+    LoaderComponent
   ],
   imports: [
     CommonModule,
     FeaturesRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    HomeModule,
+    LoginModule,
+    RegisterModule,
+    ProfileDetailsModule,
+    NotFoundModule
   ],
   providers: [
   ]
