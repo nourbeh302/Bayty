@@ -1,0 +1,84 @@
+.form-layout {
+  display: flex;
+  justify-content: center;
+  padding-block: 48px;
+}
+
+form {
+  width: min(600px, 100%);
+  min-height: 100vh;
+  padding: 32px 16px;
+  background: white;
+  box-shadow: var(--layout-shadow);
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+form > *:not(.form-group) {
+  text-align: center;
+}
+
+.form-group {
+  margin-block: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-splitter {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 32px;
+}
+
+select {
+  height: 100%;
+}
+
+.form-splitter > * {
+  width: 100%;
+}
+
+:is(input, select, [type="submit"]) {
+  padding: 12px;
+  font-size: normal;
+}
+
+[type="submit"] {
+  margin-top: 48px;
+}
+
+:is(input, select) {
+  margin-top: 2px;
+  outline: none;
+  border: 1px solid rgb(160, 160, 160);
+  border-radius: 2px;
+  background: var(--layout-color);
+}
+
+input.error {
+  border: 1px solid hsl(0, 79%, 58%);
+  background: hsl(0, 100%, 97%);
+}
+
+
+@media (width > 625px) {
+  form {
+    padding-inline: 32px;
+  }
+
+  .form-splitter {
+    flex-direction: row;
+  }
+
+  .form-splitter > * {
+    width: 50%;
+  }
+}

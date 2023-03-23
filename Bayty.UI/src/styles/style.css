@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+:root {
+  --layout-color: hsl(0, 0%, 95%);
+  --layout-shadow: 0px 0px 8px hsla(0, 0%, 10%, 10%);
+
+  --layout-font: 'DM Sans', sans-serif;
+
+  --navbar-height: 64px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+body {
+  background: var(--layout-color);
+  font-family: var(--layout-font);
+}
+
+li {
+  list-style: none;
+}
+
+a, button {
+  all: unset;
+  cursor: pointer;
+}

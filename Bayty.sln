@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{121564D6-D074-4553-99E5-79E1410765F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFModeling", "EFModeling\EFModeling.csproj", "{B64E22B3-CAE1-46BB-B3D1-1CFD7387B723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaytyAPIs", "BaytyAPIs\BaytyAPIs.csproj", "{1C8DBB8C-EC71-4780-BC31-23816CB7BADD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{121564D6-D074-4553-99E5-79E1410765F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121564D6-D074-4553-99E5-79E1410765F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121564D6-D074-4553-99E5-79E1410765F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121564D6-D074-4553-99E5-79E1410765F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64E22B3-CAE1-46BB-B3D1-1CFD7387B723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64E22B3-CAE1-46BB-B3D1-1CFD7387B723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64E22B3-CAE1-46BB-B3D1-1CFD7387B723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64E22B3-CAE1-46BB-B3D1-1CFD7387B723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C8DBB8C-EC71-4780-BC31-23816CB7BADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C8DBB8C-EC71-4780-BC31-23816CB7BADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C8DBB8C-EC71-4780-BC31-23816CB7BADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C8DBB8C-EC71-4780-BC31-23816CB7BADD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

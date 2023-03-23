@@ -1,0 +1,17 @@
+D:\Bayty\EFModeling\bin\Debug\net7.0\EFModeling.deps.json
+D:\Bayty\EFModeling\bin\Debug\net7.0\EFModeling.runtimeconfig.json
+D:\Bayty\EFModeling\bin\Debug\net7.0\EFModeling.dll
+D:\Bayty\EFModeling\bin\Debug\net7.0\EFModeling.pdb
+D:\Bayty\EFModeling\bin\Debug\net7.0\Models.dll
+D:\Bayty\EFModeling\bin\Debug\net7.0\Models.pdb
+D:\Bayty\EFModeling\obj\Debug\net7.0\EFModeling.csproj.AssemblyReference.cache
+D:\Bayty\EFModeling\obj\Debug\net7.0\EFModeling.GeneratedMSBuildEditorConfig.editorconfig
+D:\Bayty\EFModeling\obj\Debug\net7.0\EFModeling.AssemblyInfoInputs.cache
+D:\Bayty\EFModeling\obj\Debug\net7.0\EFModeling.AssemblyInfo.cs
+D:\Bayty\EFModeling\obj\Debug\net7.0\EFModeling.csproj.CoreCompileInputs.cache
+D:\Bayty\EFModeling\obj\Debug\net7.0\EFModeling.csproj.CopyComplete
+D:\Bayty\EFModeling\obj\Debug\net7.0\EFModeling.dll
+D:\Bayty\EFModeling\obj\Debug\net7.0\refint\EFModeling.dll
+D:\Bayty\EFModeling\obj\Debug\net7.0\EFModeling.pdb
+D:\Bayty\EFModeling\obj\Debug\net7.0\EFModeling.genruntimeconfig.cache
+D:\Bayty\EFModeling\obj\Debug\net7.0\ref\EFModeling.dll

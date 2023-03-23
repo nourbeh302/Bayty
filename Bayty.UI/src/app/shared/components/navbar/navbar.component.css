@@ -1,0 +1,27 @@
+.navbar {
+  background: white;
+  box-shadow: var(--layout-shadow);
+  height: var(--navbar-height);
+  padding-inline: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 32px;
+}
+
+@media (width > 767px) {
+  .navbar {
+    padding-inline: 32px;
+  }
+}
+
+@media (width > 1024px) {
+  .navbar {
+    padding-inline: 10%;
+  }
+}

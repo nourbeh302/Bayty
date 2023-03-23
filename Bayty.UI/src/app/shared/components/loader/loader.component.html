@@ -1,0 +1,41 @@
+<style>
+  .page-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+  }
+
+  .loader {
+    width: 96px;
+    height: 96px;
+
+    border-top: 4px solid hsl(0, 0%, 10%);
+    border-left: 4px solid hsl(0, 0%, 10%);
+    border-right: 4px solid hsl(0, 0%, 10%);
+    border-bottom: 4px solid transparent;
+    border-radius: 50%;
+
+    animation: spin 1000ms infinite forwards ease-in;
+  }
+
+  @keyframes spin {
+    from {
+      rotate: 0deg;
+    }
+
+    to {
+      rotate: 360deg;
+    }
+  }
+</style>
+
+<div class="page-container">
+  <div class="loader"></div>
+</div>
