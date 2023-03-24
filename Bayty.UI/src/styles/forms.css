@@ -63,12 +63,6 @@ select {
   background: var(--layout-color);
 }
 
-input.error {
-  border: 1px solid hsl(0, 79%, 58%);
-  background: hsl(0, 100%, 97%);
-}
-
-
 @media (width > 625px) {
   form {
     padding-inline: 32px;

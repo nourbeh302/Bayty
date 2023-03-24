@@ -30,6 +30,10 @@ li {
   cursor: pointer;
 }
 
+:is(input, select, textarea, button, [type="button"], [type="submit"]) {
+  border-radius: 2px;
+}
+
 :is(input, select, textarea, button) {
   font: inherit;
 }

@@ -6,7 +6,7 @@ export class Account {
     public password: string = "",
     public profileImage: string = "",
     public role: Role | null = null,
-    public location: string = "",
+    public address: string = "",
     public phoneNumber: string = ""
   ) { }
 }

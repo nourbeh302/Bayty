@@ -1,15 +1,15 @@
 <div class="form-layout">
 
-  <form [formGroup]="userForm">
+  <form [formGroup]="registerForm">
     <h1>Create Account</h1>
-    <p>register works!</p>
+    <p>Join the club for scouts where you can find your dream house</p>
 
     <div class="form-group">
 
       <div class="image-center">
         <div class="image-container">
           <img
-            [src]="userForm.value.profileImage ? userForm.value.profileImage : 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'"
+            [src]="registerForm.value.profileImage ? registerForm.value.profileImage : '__DEFAULT_IMAGE'"
             alt="image" accept="image/jpeg, image/png, image/jpg">
           <label for="profile-image">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -26,12 +26,26 @@
       <div class="form-splitter">
         <div class="form-field">
           <label for="firstName">First Name</label>
-          <input class="error" id="firstName" type="text" formControlName="firstName">
+          <input [class]="firstName?.errors ? 'error' : ''" id="firstName" type="text" formControlName="firstName" minlength="3" maxlength="33">
+          <div class="errors">
+            <span class="error-message" *ngIf="firstName?.errors?.['required'] && firstName?.touched">Please fill this field</span>
+            <span class="error-message" *ngIf="firstName?.errors?.['minlength']">Must be at least 3
+              characters long.</span>
+            <span class="error-message" *ngIf="firstName?.errors?.['maxlength']">Must be at most 32
+              characters long.</span>
+          </div>
         </div>
-  
+
         <div class="form-field">
           <label for="lastName">Last Name</label>
-          <input id="lastName" type="text" formControlName="lastName">
+          <input id="lastName" type="text" formControlName="lastName" minlength="3" maxlength="33">
+          <div class="errors">
+            <span class="error-message" *ngIf="lastName?.errors?.['required'] && lastName?.touched">Please fill this field</span>
+            <span class="error-message" *ngIf="lastName?.errors?.['minlength']">Must be at least 3
+              characters long.</span>
+            <span class="error-message" *ngIf="lastName?.errors?.['maxlength']">Must be at most 32
+              characters long.</span>
+          </div>
         </div>
       </div>
 
@@ -39,40 +53,54 @@
       <div class="form-field">
         <label for="email">Email</label>
         <input id="email" formControlName="email">
+        <div class="errors">
+          <span class="error-message" *ngIf="email?.errors?.['required'] && email?.touched">Please fill this field</span>
+          <span class="error-message" *ngIf="email?.errors?.['email']">Please enter a valid e-mail address.</span>
+        </div>
       </div>
-
-      <input type="hidden" formControlName="ImagePath"  />
 
       <div class="form-field">
         <label for="Password">Password</label>
-        <input id="Password" type="password" formControlName="password">
-      </div>
-
-      <div class="form-field">
-        <label for="phoneNumber">Phone Number</label>
-        <input id="phoneNumber" type="text" formControlName="phoneNumber">
-      </div>
-
-      <div class="form-field">
-        <label for="age">Location</label>
-        <input id="location" type="text" formControlName="address">
+        <input id="Password" type="password" formControlName="password" minlength="8" maxlength="33">
+        <div class="errors">
+          <span class="error-message" *ngIf="password?.errors?.['required'] && password?.touched">Please fill this field</span>
+          <span class="error-message" *ngIf="password?.errors?.['minlength']">Must be at least 8
+            characters long.</span>
+          <span class="error-message" *ngIf="password?.errors?.['maxlength']">Must be at most 32
+            characters long.</span>
+        </div>
       </div>
 
       <div class="form-splitter">
-        <!-- <div class="form-field">
+        <div class="form-field">
+          <label for="phoneNumber">Phone Number</label>
+          <input id="phoneNumber" type="text" formControlName="phoneNumber">
+        </div>
+
+        <div class="form-field">
+          <label for="age">Location</label>
+          <input id="location" type="text" formControlName="address">
+        </div>
+      </div>
+
+      <!-- <div class="form-splitter">
+        <div class="form-field">
           <label for="age">Age</label>
           <input id="age" type="number" min="0" max="100" formControlName="age">
-        </div> -->
+        </div>
 
-<!--         <div class="form-field">
+        <div class="form-field">
           <label for="gender">Gender</label>
           <select (change)="changeGender($event)" formControlName="gender">
             <option *ngFor="let gender of enumKeys">{{ gender }}</option>
           </select>
         </div>
- -->      </div>
+      </div> -->
 
-      <a routerLink="/login">Already have account? Sign in</a>
+      <div class="login-cta">
+        <span>Already have an account?&nbsp;</span>
+        <a routerLink="/login">Sign in</a>
+      </div>
 
     </div>
 
