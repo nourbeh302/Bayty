@@ -72,3 +72,8 @@ input.ng-invalid.ng-touched {
 [type="submit"]:hover {
   background: #333;
 }
+
+[type="submit"]:disabled {
+  cursor: not-allowed;
+  background: grey;
+}
