@@ -3,12 +3,12 @@ using Models.IRepositories;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace EF_Modeling.Repositories
+namespace EFModeling.Repositories
 {
     public class GenericRepository<T, K> : IGenericRepository<T, K> where T : class
     {
-        private readonly AppDbContext _context;
-        public GenericRepository(AppDbContext context)
+        private readonly ApplicationDbContext _context;
+        public GenericRepository(ApplicationDbContext context)
         {
             _context = context;
         }

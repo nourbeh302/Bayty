@@ -1,6 +1,6 @@
-﻿namespace BaytyAPIs.DTOs.AuthenticationDTOs
+﻿namespace BaytyAPIs.Dtos.AuthenticationDtos
 {
-    public class AuthDTO
+    public class AuthDto
     {
         public bool IsAuthenticated { get; set; }
         public string Message { get; set; }

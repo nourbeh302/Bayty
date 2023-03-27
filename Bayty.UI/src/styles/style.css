@@ -5,6 +5,9 @@
   --layout-color: hsl(0, 0%, 95%);
   --layout-shadow: 0px 0px 8px hsla(0, 0%, 10%, 10%);
 
+  --primary-base: hsl(255, 98%, 45%);
+  --primary-hover: hsl(255, 96%, 52%);
+
   --layout-font: 'DM Sans', sans-serif;
 
   --navbar-height: 64px;
@@ -25,15 +28,15 @@ li {
   list-style: none;
 }
 
-:is(a, button, [type="button"], [type="submit"]) {
+a {
   all: unset;
   cursor: pointer;
 }
 
-:is(input, select, textarea, button, [type="button"], [type="submit"]) {
+:is(input, select, textarea) {
   border-radius: 2px;
 }
 
-:is(input, select, textarea, button) {
+:is(input, select, textarea) {
   font: inherit;
 }

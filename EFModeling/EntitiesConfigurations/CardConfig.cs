@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Models.Entities;
 
-namespace EF_Modeling.EntitiesConfigurations
+namespace EFModeling.EntitiesConfigurations
 {
     public class CardConfig : IEntityTypeConfiguration<Card>
     {

@@ -1,6 +1,6 @@
-﻿namespace BaytyAPIs.DTOs
+﻿namespace BaytyAPIs.Dtos
 {
-    public class ErrorDTO
+    public class ErrorDto
     {
         public string ErrorMessage { set; get; } = string.Empty;
     }

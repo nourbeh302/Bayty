@@ -76,23 +76,6 @@ img {
   border-radius: 50%;
 }
 
-.button {
-  cursor: pointer;
-  font-family: inherit;
-  font-size: medium;
-  padding: 8px 32px;
-  box-shadow: inset 0 0 1px 1px rgb(26, 26, 26);
-  background: white;
-  color: rgb(26, 26, 26);
-  border: none;
-  border-radius: 4px;
-  width: min(120px, 100%);
-}
-
-.button:hover {
-  background: var(--layout-color);
-}
-
 hr {
   width: 100%;
   margin-block: 32px;

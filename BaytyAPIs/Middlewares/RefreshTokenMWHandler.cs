@@ -14,7 +14,7 @@ public class RefreshTokenMWHandler
     public async Task InvokeAsync(HttpContext context)
     {
 
-        Console.WriteLine($"Is Connection? {context.WebSockets.IsWebSocketRequest}");
+        Console.WriteLine($"Connected? {context.WebSockets.IsWebSocketRequest}");
 
         string accessToken = context.Request.Headers["Authorization"];
 

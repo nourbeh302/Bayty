@@ -1,5 +1,5 @@
 ﻿using BaytyAPIs.Constants;
-using BaytyAPIs.DTOs.AuthenticationDTOs;
+using BaytyAPIs.Dtos.AuthenticationDtos;
 using BaytyAPIs.Security;
 using BaytyAPIs.Services.Authentication;
 using BaytyAPIs.Services.EmailSending;
@@ -44,10 +44,10 @@ namespace BaytyAPIs.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(AuthDTO))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(AuthDTO))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(LoginDTO))]
-        public async Task<ActionResult<AuthDTO>> Login([FromBody] LoginDTO model)
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(AuthDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(AuthDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(LoginDto))]
+        public async Task<ActionResult<AuthDto>> Login([FromBody] LoginDto model)
         {
             if (ModelState.IsValid)
             {
@@ -83,13 +83,13 @@ namespace BaytyAPIs.Controllers
         /// <summary>
         /// This method stores the data of user for the first time and tell the user to verify his email
         /// </summary>
-        /// <param name="model">RegisterDTO type</param>
-        /// <returns>AuthDTO</returns>
+        /// <param name="model">RegisterDto type</param>
+        /// <returns>AuthDto</returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(RegisterDTO))]
-        public async Task<ActionResult> Register([FromBody] RegisterDTO model)
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(RegisterDto))]
+        public async Task<ActionResult> Register([FromBody] RegisterDto model)
         {
             if (ModelState.IsValid)
             {
@@ -171,7 +171,7 @@ namespace BaytyAPIs.Controllers
             if (user is null)
                 return Ok(AuthMessages.NotFoundUser);
 
-            if (user.isPhoneNumberVerified)
+            if (user.IsPhoneNumberVerified)
                 return Ok("Phone Number Is Already Verified");
 
             var token = _authService.GetPhoneNumberToken(userId);
@@ -193,7 +193,7 @@ namespace BaytyAPIs.Controllers
             if (user == null)
                 return Ok(AuthMessages.NotFoundUser);
 
-            if (user.isPhoneNumberVerified)
+            if (user.IsPhoneNumberVerified)
                 return Ok("Phone Number Is Already Verified");
 
             if (await _authService.VerifyPhoneNumberToken(user, token))
@@ -241,7 +241,7 @@ namespace BaytyAPIs.Controllers
                 if (!result.Succeeded)
                 {
 
-                    user.isPhoneNumberVerified = false;
+                    user.IsPhoneNumberVerified = false;
 
                     await _userManager.UpdateAsync(user);
 

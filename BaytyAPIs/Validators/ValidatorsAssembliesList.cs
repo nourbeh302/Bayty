@@ -7,8 +7,8 @@ namespace BaytyAPIs.Validators
     {
         public static List<Assembly> validatorsAssembly = new List<Assembly>
         {
-                typeof(LoginDTOValidator).Assembly,
-                typeof(RegisterDTOValidator).Assembly,
+                typeof(LoginDtoValidator).Assembly,
+                typeof(RegisterDtoValidator).Assembly,
         };
     }
 }

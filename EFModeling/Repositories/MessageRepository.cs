@@ -2,12 +2,12 @@
 using Models.Entities;
 using Models.IRepositories;
 
-namespace EF_Modeling.Repositories
+namespace EFModeling.Repositories
 {
     public class MessageRepository : GenericRepository<Message, int>, IMessageRepository
     {
-        private readonly AppDbContext _context;
-        public MessageRepository(AppDbContext context) : base(context)
+        private readonly ApplicationDbContext _context;
+        public MessageRepository(ApplicationDbContext context) : base(context)
         {
             _context = context;
         }

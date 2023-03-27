@@ -2,12 +2,12 @@
 using Models.Entities;
 using Models.IRepositories;
 
-namespace EF_Modeling.Repositories
+namespace EFModeling.Repositories
 {
     public class PropertyRepository : GenericRepository<Property, int>, IPropertyRepository
     {
-        private readonly AppDbContext _context;
-        public PropertyRepository(AppDbContext context) : base(context)
+        private readonly ApplicationDbContext _context;
+        public PropertyRepository(ApplicationDbContext context) : base(context)
         {
             _context = context;
         }

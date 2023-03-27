@@ -1,14 +1,14 @@
-﻿using EF_Modeling.Repositories;
+﻿using EFModeling.Repositories;
 using Models.DataStoreContract;
 using Models.Entities;
 using Models.IRepositories;
 
-namespace EF_Modeling.DataStore
+namespace EFModeling.DataStore
 {
     public class DataStore : IDataStore
     {
-        private readonly AppDbContext _context;
-        public DataStore(AppDbContext context)
+        private readonly ApplicationDbContext _context;
+        public DataStore(ApplicationDbContext context)
         {
             _context = context;
             Users = new GenericRepository<User, string>(context);

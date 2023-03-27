@@ -1,15 +1,3 @@
-D:\GraduationProject\GraduationProject\Models\bin\Debug\net7.0\Models.deps.json
-D:\GraduationProject\GraduationProject\Models\bin\Debug\net7.0\Models.dll
-D:\GraduationProject\GraduationProject\Models\bin\Debug\net7.0\Models.pdb
-D:\GraduationProject\GraduationProject\Models\obj\Debug\net7.0\Models.csproj.AssemblyReference.cache
-D:\GraduationProject\GraduationProject\Models\obj\Debug\net7.0\Models.GeneratedMSBuildEditorConfig.editorconfig
-D:\GraduationProject\GraduationProject\Models\obj\Debug\net7.0\Models.AssemblyInfoInputs.cache
-D:\GraduationProject\GraduationProject\Models\obj\Debug\net7.0\Models.AssemblyInfo.cs
-D:\GraduationProject\GraduationProject\Models\obj\Debug\net7.0\Models.csproj.CoreCompileInputs.cache
-D:\GraduationProject\GraduationProject\Models\obj\Debug\net7.0\Models.dll
-D:\GraduationProject\GraduationProject\Models\obj\Debug\net7.0\refint\Models.dll
-D:\GraduationProject\GraduationProject\Models\obj\Debug\net7.0\Models.pdb
-D:\GraduationProject\GraduationProject\Models\obj\Debug\net7.0\ref\Models.dll
 D:\Bayty\Models\bin\Debug\net7.0\Models.deps.json
 D:\Bayty\Models\bin\Debug\net7.0\Models.dll
 D:\Bayty\Models\bin\Debug\net7.0\Models.pdb

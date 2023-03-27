@@ -8,8 +8,8 @@ namespace Models.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
-        public AccountType type { set; get; }
-        public bool isPhoneNumberVerified { get; set; }
+        public AccountType Type { set; get; }
+        public bool IsPhoneNumberVerified { get; set; }
         public string ImagePath { get; set; }
         public int CardId { get; set; }
         public Card Card { get; set; }

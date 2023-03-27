@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using BaytyAPIs.DTOs.AuthenticationDTOs;
+using BaytyAPIs.Dtos.AuthenticationDtos;
 
 namespace BaytyAPIs.Validators.AuthValidators
 {
-    public class RegisterDTOValidator : AbstractValidator<RegisterDTO>
+    public class RegisterDtoValidator : AbstractValidator<RegisterDto>
     {
-        public RegisterDTOValidator()
+        public RegisterDtoValidator()
         {
             RuleFor(r => r.Email)
                 .EmailAddress();

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Models.Entities;
 
-namespace EF_Modeling.EntitiesConfigurations
+namespace EFModeling.EntitiesConfigurations
 {
     public class ApartmentConfig : IEntityTypeConfiguration<Apartment>
     {

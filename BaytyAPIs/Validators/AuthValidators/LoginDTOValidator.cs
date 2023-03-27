@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using BaytyAPIs.DTOs.AuthenticationDTOs;
+using BaytyAPIs.Dtos.AuthenticationDtos;
 
 namespace BaytyAPIs.Validators.AuthValidators
 {
-    public class LoginDTOValidator : AbstractValidator<LoginDTO>
+    public class LoginDtoValidator : AbstractValidator<LoginDto>
     {
-        public LoginDTOValidator()
+        public LoginDtoValidator()
         {
             //RuleFor(l => l.Email)
             //    .EmailAddress(FluentValidation.Validators.EmailValidationMode.AspNetCoreCompatible)

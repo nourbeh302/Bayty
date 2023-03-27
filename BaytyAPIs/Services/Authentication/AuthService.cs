@@ -1,5 +1,5 @@
 ﻿using BaytyAPIs.Constants;
-using BaytyAPIs.DTOs.AuthenticationDTOs;
+using BaytyAPIs.Dtos.AuthenticationDtos;
 using BaytyAPIs.Security;
 using BaytyAPIs.Security;
 using Microsoft.AspNetCore.DataProtection;
@@ -39,11 +39,11 @@ public class AuthService : IAuthService
         _protector = provider.CreateProtector(AccountProtectorPurpose.HashingMail);
     }
 
-    public async Task<AuthDTO> RegisterUserAsync(RegisterDTO model)
+    public async Task<AuthDto> RegisterUserAsync(RegisterDto model)
     {
 
         if (await _userManger.FindByEmailAsync(model.Email) != null)
-            return new AuthDTO { Message = "Email is already exists." };
+            return new AuthDto { Message = "Email is already exists." };
 
         //_userManger.GeneratePhoneNumberToken();
 
@@ -54,33 +54,33 @@ public class AuthService : IAuthService
             Email = model.Email,
             UserName = model.Email,
             Address = model.Address,
-            type = model.AccountType,
+            Type = model.AccountType,
             PhoneNumber = model.PhoneNumber,
             ImagePath = model.ImagePath
         };
 
         var result = await _userManger.CreateAsync(user, model.Password);
 
-        AuthDTO authDTO = new AuthDTO();
+        AuthDto authDto = new AuthDto();
 
         if (!result.Succeeded)
         {
             foreach (var error in result.Errors)
-                authDTO.Message += error.Description;
-            return authDTO;
+                authDto.Message += error.Description;
+            return authDto;
         }
 
-        authDTO.Message = "Your account created successfully! please verify your email!";
+        authDto.Message = "Your account created successfully! please verify your email!";
 
-        return authDTO;
+        return authDto;
     }
 
-    public async Task<AuthDTO> LoginAsync(LoginDTO model)
+    public async Task<AuthDto> LoginAsync(LoginDto model)
     {
         var user = await _userManger.Users.FirstOrDefaultAsync(u => u.Email == model.Email || u.PhoneNumber == model.Email);
 
         if (user == null || !(await _signInManager.CheckPasswordSignInAsync(user, model.Password, false)).Succeeded)
-            return new AuthDTO { Message = AuthMessages.NotFoundUser };
+            return new AuthDto { Message = AuthMessages.NotFoundUser };
 
         var token = await GetAccessTokenAsync(user);
 
@@ -100,11 +100,11 @@ public class AuthService : IAuthService
             await _userManger.UpdateAsync(user);
         }
 
-        return new AuthDTO
+        return new AuthDto
         {
             RefreshToken = refreshToken.Token,
             AccessToken = token,
-            AccessTokenLifeTime = DateTime.Now.AddHours(_jwt.LifttimeInMinutes).ToLocalTime(),
+            AccessTokenLifeTime = DateTime.Now.AddHours(_jwt.LifeTimeInMinutes).ToLocalTime(),
             IsAuthenticated = true,
             UserId = user.Id,
             Message = "User is authenticated now",
@@ -146,7 +146,7 @@ public class AuthService : IAuthService
             claims: userClaims,
             signingCredentials: signingCredentials,
             notBefore: DateTime.Now,
-            expires: DateTime.Now.AddSeconds(_jwt.LifttimeInMinutes).ToLocalTime());
+            expires: DateTime.Now.AddSeconds(_jwt.LifeTimeInMinutes).ToLocalTime());
 
 
         return new JwtSecurityTokenHandler()
@@ -175,7 +175,7 @@ public class AuthService : IAuthService
             else
             {
                 if (_phoneNumsWithTokens.PhoneNumberTokens.TryRemove(token, out phoneWithToken))
-                    user.isPhoneNumberVerified = true;
+                    user.IsPhoneNumberVerified = true;
                     await _userManger.UpdateAsync(user);
                 return true;
             }
@@ -187,13 +187,13 @@ public class AuthService : IAuthService
     {
         string phoneNumberToken = GeneratePhoneNumberToken();
 
-        var phoneAndToken = new PhoneNumberToken
+        var phoneAnDtoken = new PhoneNumberToken
         {
             Token = phoneNumberToken,
             UserId = userId
         };
 
-        _phoneNumsWithTokens.PhoneNumberTokens.TryAdd(phoneNumberToken, phoneAndToken);
+        _phoneNumsWithTokens.PhoneNumberTokens.TryAdd(phoneNumberToken, phoneAnDtoken);
 
         return phoneNumberToken;
     }

@@ -1,5 +1,5 @@
-using EF_Modeling;
-using EF_Modeling.DataStore;
+using EFModeling;
+using EFModeling.DataStore;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -36,7 +36,6 @@ builder.Services.AddControllers()
                 .AddNewtonsoftJson()
                 .AddFluentValidation(config => config.RegisterValidatorsFromAssemblies(ValidatorsAssembliesList.validatorsAssembly));
 
-
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
@@ -49,14 +48,16 @@ builder.Services.Configure<SMSSettings>(builder.Configuration.GetSection("SMSSet
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 
 builder.Services.AddIdentity<User, IdentityRole>(opts => opts.User.AllowedUserNameCharacters += " ")
-                .AddEntityFrameworkStores<AppDbContext>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
+
 ////Liftetime => notfound
-builder.Services.AddDbContextPool<AppDbContext>(opts =>
+builder.Services.AddDbContext<ApplicationDbContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration["ConnectionStrings:Bayty_Conn"],
-        a => a.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName))
+    opts.UseSqlServer(connectionString,
+        a => a.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName))
               .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
 

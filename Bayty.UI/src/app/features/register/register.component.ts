@@ -74,7 +74,7 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.user);
+    console.log(this.registerForm.value.profileImage);
   }
 
   onImgSelected: Function = (event: any): void => {

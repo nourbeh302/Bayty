@@ -1,16 +1,14 @@
-﻿using EF_Modeling.EntitiesConfigurations;
+﻿using EFModeling.EntitiesConfigurations;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Models.Entities;
 
-namespace EF_Modeling
+namespace EFModeling
 {
-    public class AppDbContext : IdentityDbContext<User>
+    public class ApplicationDbContext : IdentityDbContext<User>
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-
-        }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        { }
 
         public DbSet<Report> Reports { get; set; }
         public DbSet<Transaction> Transcations { get; set; }

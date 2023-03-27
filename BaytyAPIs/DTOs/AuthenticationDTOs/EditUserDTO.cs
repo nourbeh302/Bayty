@@ -1,6 +1,6 @@
-﻿namespace BaytyAPIs.DTOs.AuthenticationDTOs
+﻿namespace BaytyAPIs.Dtos.AuthenticationDtos
 {
-    public class EditUserDTO
+    public class EditUserDto
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
