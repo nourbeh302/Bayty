@@ -15,7 +15,8 @@
 }
 
 .control-group {
-    background: var(--layout-color);
+    background: hsl(210, 100%, 98%);
+
 }
 
 .control-group button {
@@ -56,28 +57,10 @@
     justify-content: center;
 }
 
-.home-filter .c-form-field:has([type="submit"]) button {
-    border: 0;
-    background: var(--primary-base);
-    color: white;
-    text-align: center;
-    border-radius: 2px;
-    padding: 12px 32px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-}
-
 @media (width < 525px) {
     .home-filter .c-form-field:has([type="submit"]) button {
         width: 100%;
     }
-}
-
-.home-filter .c-form-field:has([type="submit"]) button:hover {
-    background: var(--primary-hover);
 }
 
 .home-filter .c-form-field>* {
@@ -94,20 +77,22 @@
     appearance: none;
 }
 
-.c-select::after {
-    content: url("/assets/icons/chevron_down_24.svg");
-    display: block;
+.select-icon {
     height: 100%;
     aspect-ratio: 1;
-    pointer-events: none;
-
     position: absolute;
-    top: 100%;
+    top: 50%;
     right: 0;
-    translate: 0 -100%;
+    translate: 0 -50%;
+    pointer-events: none;
+}
 
+.c-select i {
+    font-size: 24px;
+    
+    height: 100%;
     display: grid;
-    place-items: center;
+    place-content: center;
 }
 
 .c-select option {

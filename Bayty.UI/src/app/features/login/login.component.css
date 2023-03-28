@@ -1,5 +1,30 @@
-:host {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+form {
+  min-height: unset;
+}
+
+.error-message {
+  color: hsl(0, 79%, 58%);
+  font-size: smaller;
+}
+
+.login-cta {
+  font-size: smaller;
+}
+
+.login-cta a {
+  color: var(--primary-base);
+}
+
+[type="submit"] {
+  background: var(--primary-base);
+  color: white;
+}
+
+[type="submit"]:hover {
+  background: var(--primary-hover);
+}
+
+[type="submit"]:disabled {
+  cursor: not-allowed;
+  background: grey;
 }

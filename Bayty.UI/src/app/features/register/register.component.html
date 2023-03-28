@@ -9,10 +9,10 @@
       <div class="image-center">
         <div class="image-container">
           <img
-            [src]="registerForm.value.profileImage === {} ? registerForm.value.profileImage : 'assets/images/__DEFAULT_IMAGE.jpg'"
+            [src]="registerForm.value.profileImage === {} ? registerForm.value.profileImage : 'assets/images/clumsy.jpg'"
             alt="">
           <label for="profile-image">
-            <img src="/assets/icons/camera_24_w.svg" alt="">
+            <i class="icon icon-ic_fluent_camera_add_20_regular"></i>
           </label>
           <input type="file" (change)="onImgSelected($event)" id="profile-image">
         </div>

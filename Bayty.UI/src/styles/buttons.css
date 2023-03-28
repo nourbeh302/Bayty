@@ -7,6 +7,7 @@ button {
 :is(button, .button) {
     padding: 12px 24px;
     border-radius: 2px;
+    text-align: center;
 }
 
 .button-full-width {
@@ -22,37 +23,51 @@ button {
 .button-primary:hover {
     background: var(--primary-hover);
 }
+
 /*#endregion */
 
 /*#region Secondary Button  */
 .button-secondary {
     background: white;
-    border: 1px solid black;
+    border: 1px solid var(--primary-base);
+    color: var(--primary-base);
 }
 
 .button-secondary:hover {
-    background: var(--layout-color);
+    background: var(--light-base);
 }
+
 /*#endregion */
 
 /*#region Tertiary Button  */
-.button-link {
+.button-tertiary {
     background: white;
+    color: var(--primary-base);
 }
 
-.button-link:hover {
-    background: var(--layout-color);
+.button-tertiary:hover {
+    background: var(--light-base);
 }
+
 /*#endregion */
 
+/*#region Icon Button  */
 .button-icon {
-    padding: 12px;
+    width: 48px;
+    height: 48px;
     border-radius: 2px;
     display: grid;
-    place-items: center;
+    place-content: center;
     background: white;
+}
+
+.button-icon i {
+    display: grid;
+    place-content: center;
 }
 
 .button-icon:hover {
-    background: var(--layout-color);
+    background: var(--light-base);
 }
+/*#endregion */
+

@@ -57,8 +57,9 @@
   color: white;
 }
 
-.sidebar-block:is(:focus) svg path:nth-child(2) {
-  fill: white;
+.sidebar-block .icon {
+  width: 48px;
+  height: 48px;
 }
 
 h1 {
@@ -94,7 +95,7 @@ hr {
 
 @media (width > 1024px) {
   .profile-layout {
-    padding-inline: 10%;
+    padding-inline: 64px;
 
     display: grid;
     grid-gap: 32px;

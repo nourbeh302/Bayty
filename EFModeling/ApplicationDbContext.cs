@@ -32,6 +32,5 @@ namespace EFModeling
             builder.ApplyConfigurationsFromAssembly(typeof(ApartmentConfig).Assembly);
             builder.ApplyConfigurationsFromAssembly(typeof(AdvertisementConfig).Assembly);
         }
-
     }
 }

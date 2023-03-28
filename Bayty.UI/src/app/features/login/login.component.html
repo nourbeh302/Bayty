@@ -1,13 +1,29 @@
-<h1>login works!</h1>
+<div class="form-layout">
 
-<label for="name">Name: </label>
-<input id="name" type="text" (ngModelChange)="validateName(name.value)">
+  <form [formGroup]="loginForm">
+    <h1>Login</h1>
+    <p>Join the club for scouts where you can find your dream house</p>
 
-<p>{{ nameState }}</p>
+    <div class="form-group">
 
-<!-- <a routerLink="/register">
-  <button>Create account</button>
-</a>
- -->
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" placeholder=" john.doe123@mail.com">
+      </div>
 
-<button routerLink="/register">Login</button>
+      <div class="form-field">
+        <label for="Password">Password</label>
+        <input id="Password" type="password" formControlName="password" minlength="8" maxlength="33"
+          placeholder="Your secret password">
+      </div>
+
+      <div class="login-cta">
+        <span>Don't have account?&nbsp;</span>
+        <a routerLink="/register">Create new one</a>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid" (click)="validateUser(email, password)">Login</button>
+
+  </form>
+</div>

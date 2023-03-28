@@ -1,27 +1,56 @@
-<nav class="navbar">
-  <div class="navbar-brand">
-    <a routerLink="">Bayty</a>
+<div class="navbar-wrapper">
+  <nav class="navbar">
+    <div class="navbar-brand navbar-left">
+      <a routerLink="">Bayty</a>
+    </div>
+    <div class="navbar-right" *ngIf="isUserLoggedIn; else signedOutBlock">
+      <div class="navbar-links">
+        <a class="button-icon notification-button">
+          <i class="icon icon-ic_fluent_alert_20_regular"></i>
+        </a>
+        <a class="button-icon mail-button">
+          <i class="icon icon-ic_fluent_chat_20_regular"></i>
+        </a>
+        <a class="button-icon payment-button">
+          <i class="icon icon-ic_fluent_wallet_20_regular"></i>
+        </a>
+        <a class="button-icon user-button" routerLink="user">
+          <i class="icon icon-ic_fluent_person_20_regular"></i>
+        </a>
+        <button class="button-icon menu-button navbar-toggler" (click)="toggleNavbarCollapse()">
+          <i class="icon icon-ic_fluent_clock_20_regular"></i>
+        </button>
+      </div>
+      <div class="navbar-cta">
+        <button class="button button-secondary" (click)="isUserLoggedIn = !isUserLoggedIn">Sign out</button>
+      </div>
+    </div>
+    <ng-template #signedOutBlock>
+      <div class="navbar-right">
+        <div class="navbar-links">
+          <button class="button-icon menu-button navbar-toggler" (click)="toggleNavbarCollapse()">
+            <i class="icon icon-ic_fluent_clock_20_regular"></i>
+          </button>
+        </div>
+        <div class="navbar-cta">
+          <button class="button button-tertiary" routerLink="login">Login</button>
+          <button class="button button-primary" (click)="isUserLoggedIn = !isUserLoggedIn" routerLink="register">Get Started</button>
+        </div>
+      </div>
+    </ng-template>
+  </nav>
+  <div class="navbar-collapse" *ngIf="isNavbarCollapseToggled">
+    <a class="button-icon notification-button" (click)="toggleNavbarCollapse()">
+      <i class="icon icon-ic_fluent_alert_20_regular"></i>
+    </a>
+    <a class="button-icon mail-button" (click)="toggleNavbarCollapse()">
+      <i class="icon icon-ic_fluent_chat_20_regular"></i>
+    </a>
+    <a class="button-icon payment-button" (click)="toggleNavbarCollapse()">
+      <i class="icon icon-ic_fluent_wallet_20_regular"></i>
+    </a>
+    <a class="button-icon user-button" (click)="toggleNavbarCollapse()" routerLink="user">
+      <i class="icon icon-ic_fluent_person_20_regular"></i>
+    </a>
   </div>
-  <button class="navbar-toggler">
-    H
-  </button>
-  <div class="navbar-right" *ngIf="isUserLoggedIn; else signedOutBlock">
-    <!-- <ul class="navbar-links" *ngFor="let link in navigationLinks">
-      <a class="button-icon" [routerLink]="link.routerRedirect">
-        <img [src]="link.iconPath" alt="">
-      </a>
-    </ul> -->
-    <button class="button button-secondary" (click)="isUserLoggedIn = !isUserLoggedIn">Sign out</button>
-  </div>
-  <ng-template #signedOutBlock>
-    <ul class="navbar-links">
-      <button class="button button-secondary" (click)="isUserLoggedIn = !isUserLoggedIn">Login</button>
-      <a class="button button-primary" routerLink="register">
-        Register
-      </a>
-    </ul>
-  </ng-template>
-</nav>
-<div class="navbar-collapse">
-
 </div>

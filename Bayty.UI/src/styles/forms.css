@@ -60,7 +60,7 @@ select {
   outline: none;
   border: 1px solid rgb(160, 160, 160);
   border-radius: 2px;
-  background: var(--layout-color);
+  background: var(--light-base);
 }
 
 @media (width > 625px) {

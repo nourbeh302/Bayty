@@ -36,14 +36,14 @@
 }
 
 #properties {
-    padding-inline: 10%;
+    padding-inline: 16px;
 }
 
 #properties h2 {
     font-size: 36px;
 }
 
-@media (width < 626px) {
+@media (width > 626px) {
     #properties {
         padding-inline: 32px;
     }

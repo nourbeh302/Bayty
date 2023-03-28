@@ -2,25 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
 :root {
-  --layout-color: hsl(0, 0%, 95%);
+  --light-base: hsl(0, 0%, 95%);
   --layout-shadow: 0px 0px 8px hsla(0, 0%, 10%, 10%);
 
-  --primary-base: hsl(255, 98%, 45%);
-  --primary-hover: hsl(255, 96%, 52%);
+  --primary-base: hsl(237, 90%, 61%);
+  --primary-hover: hsl(237, 72%, 54%);
 
   --layout-font: 'DM Sans', sans-serif;
 
-  --navbar-height: 64px;
+  --navbar-height: 72px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box !important;
 }
 
 body {
-  background: var(--layout-color);
+  background: var(--light-base);
   font-family: var(--layout-font);
 }
 
@@ -39,4 +41,20 @@ a {
 
 :is(input, select, textarea) {
   font: inherit;
+}
+
+.container {
+  padding-inline: 16px;
+}
+
+@media (width > 767px) {
+  .container {
+    padding-inline: 32px;
+  }
+}
+
+@media (width > 767px) {
+  .container {
+    padding-inline: 64px;
+  }
 }

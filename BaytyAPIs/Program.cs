@@ -53,26 +53,22 @@ builder.Services.AddIdentity<User, IdentityRole>(opts => opts.User.AllowedUserNa
 
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
 
-////Liftetime => notfound
-builder.Services.AddDbContext<ApplicationDbContext>(opts =>
+// LifeTime => notfound
+builder.Services.AddDbContextPool<ApplicationDbContext>(opts =>
 {
-    opts.UseSqlServer(connectionString,
+    var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+    optionsBuilder.UseSqlServer(connectionString,
         a => a.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName))
               .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
 
+
 builder.Services.AddSingleton<PhoneNumberValidatorTokens>();
-
 builder.Services.AddHttpClient<ISMSService, SMSService>();
-
 builder.Services.AddSingleton<IWebSocketService, WebSocketService>();
-
 builder.Services.AddScoped<IDataStore, DataStore>();
-
 builder.Services.AddScoped<IAuthService, AuthService>();
-
 builder.Services.AddScoped<IEmailSenderService, EmailSenderService>();
-
 builder.Services.AddScoped<ISMSService, SMSService>();
 
 builder.Services.AddAuthorization(config =>

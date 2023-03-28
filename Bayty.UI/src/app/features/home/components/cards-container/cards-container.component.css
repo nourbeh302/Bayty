@@ -38,7 +38,7 @@
     overflow: hidden;
 
     flex-basis: 300px;
-    height: 400px;
+    height: 360px;
     flex-shrink: 0;
 
     position: relative;
@@ -54,11 +54,6 @@
 
 .card-item:hover .card-image {
     scale: 110%;
-    rotate: 4deg;
-}
-
-.card-item:nth-of-type(even):hover .card-image {
-    rotate: -4deg;
 }
 
 .card-item .card-body {
