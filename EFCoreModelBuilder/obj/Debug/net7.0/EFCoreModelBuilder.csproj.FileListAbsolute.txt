@@ -1,0 +1,17 @@
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\bin\Debug\net7.0\EFCoreModelBuilder.deps.json
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\bin\Debug\net7.0\EFCoreModelBuilder.runtimeconfig.json
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\bin\Debug\net7.0\EFCoreModelBuilder.dll
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\bin\Debug\net7.0\EFCoreModelBuilder.pdb
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\bin\Debug\net7.0\Models.dll
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\bin\Debug\net7.0\Models.pdb
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\obj\Debug\net7.0\EFCoreModelBuilder.csproj.AssemblyReference.cache
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\obj\Debug\net7.0\EFCoreModelBuilder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\obj\Debug\net7.0\EFCoreModelBuilder.AssemblyInfoInputs.cache
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\obj\Debug\net7.0\EFCoreModelBuilder.AssemblyInfo.cs
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\obj\Debug\net7.0\EFCoreModelBuilder.csproj.CoreCompileInputs.cache
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\obj\Debug\net7.0\EFCoreModelBuilder.csproj.CopyComplete
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\obj\Debug\net7.0\EFCoreModelBuilder.dll
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\obj\Debug\net7.0\refint\EFCoreModelBuilder.dll
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\obj\Debug\net7.0\EFCoreModelBuilder.pdb
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\obj\Debug\net7.0\EFCoreModelBuilder.genruntimeconfig.cache
+C:\Users\noure\Downloads\Bayty\EFCoreModelBuilder\obj\Debug\net7.0\ref\EFCoreModelBuilder.dll
